@@ -2,11 +2,12 @@ import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
 import { setSeesionIndex } from '../Features/DataSlice'
+import { Mystate } from './MainType'
 
 const Nav = () => {
   const nav = useNavigate()
-  const state: any = useSelector(state => state)
-  const [name, setName] = useState('')
+  const state:Mystate = useSelector((state:Mystate) => state)
+  const [name, setName] = useState<string>('')
   const dispatch = useDispatch()
 
   //for userName

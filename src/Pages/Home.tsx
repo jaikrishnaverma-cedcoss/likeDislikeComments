@@ -2,9 +2,10 @@ import React from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
 import { Comments, deleteBlog, Dislike, Like } from '../Features/DataSlice'
+import { Mystate } from './MainType'
 
 const Home = () => {
-  const state = useSelector((state: any) => state)
+  const state:Mystate = useSelector((state: Mystate) => state)
   const dispatch = useDispatch()
   const navigate = useNavigate()
   const Deletor = (index: number, commentIndex: number) => {

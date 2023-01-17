@@ -1,9 +1,10 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
+import { Mystate } from "../Pages/MainType";
 
-const initialState: any = {
-    posts: [
 
-    ],
+// Initial State for reducer
+const initialState: Mystate = {
+    posts: [],
     users: [{
         name: 'jai krishna verma',
         email: 'jai@gmail.com',
@@ -16,8 +17,8 @@ const initialState: any = {
     msg: ''
 }
 
+// fetch data 
 export const fetchData = createAsyncThunk('DataSlice/fetchData', async () => {
-    console.log('aa gya')
     let res: any = await fetch('https://api.pexels.com/v1/curated?page=11&per_page=30', {
         headers: {
             Authorization: '563492ad6f917000010000018ca9c228a1e543fabdc77f6bc56284f9',
@@ -30,6 +31,7 @@ export const fetchData = createAsyncThunk('DataSlice/fetchData', async () => {
     return res
 
 })
+
 
 const DataSlice: any = createSlice({
     name: 'DataSlice',

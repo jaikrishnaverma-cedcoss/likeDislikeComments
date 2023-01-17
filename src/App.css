@@ -1,0 +1,34 @@
+body{
+background-color: aliceblue;
+}
+.scroller{
+    max-height:150vh;
+    overflow-y: scroll;
+}
+
+.list-group-item:hover {
+    z-index: 2;
+    color: #0d6efd;
+    background-color: #0d6efd;
+    border-color: #0d6efd;
+    color: white;
+}
+.templates img{
+    max-width: 100px;
+
+    width: 100px;
+    margin-left: 10px;
+    height: 80px;
+}
+.contents{
+    background-color: rgba(0, 0, 0, 0.7);
+}
+.accordion:nth-child(odd) .accordion-item h2 button{
+background-color: rgb(167, 214, 255);
+}
+.accordion:nth-child(even) .accordion-item h2 button{
+    background-color: #ffa357c9;
+    }
+::-webkit-scrollbar {
+    display: none;
+}
